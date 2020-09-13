@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <LinearLayout
+        android:id="@+id/top_linear"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginRight="15dp"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent">
+
+        <ImageButton
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/firebase"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="firebaseOn"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            android:src="@drawable/firebase" />
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:src="@drawable/cloudit" />
+
+        <ImageButton
+            android:layout_width="150dp"
+            android:layout_height="50dp"
+            android:id="@+id/ibm_cloud"
+            android:layout_gravity="center"
+            android:layout_weight="1"
+            android:onClick="ibmCloudOn"
+            android:scaleType="centerInside"
+            android:background="@android:color/transparent"
+            android:src="@drawable/ibm_cloud" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/simple_line"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:alpha="0.5"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="1dp"
+        android:scaleY="-1"
+        android:src="@drawable/line"
+        app:layout_constraintTop_toBottomOf="@+id/top_linear" />
+
+    <TextView
+        android:id="@+id/initial_text"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Feels kinda lonely in here :("
+        app:layout_constraintTop_toTopOf="@+id/scroll"
+        app:layout_constraintBottom_toBottomOf="@+id/scroll"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:id="@+id/scroll"
+        android:requiresFadingEdge="vertical"
+        android:fadeScrollbars="true"
+        app:layout_constraintTop_toBottomOf="@+id/simple_line"
+        app:layout_constraintBottom_toTopOf="@+id/simple_line2">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/linear"
+            android:orientation="vertical">
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ImageView
+        android:id="@+id/simple_line2"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:alpha="0.5"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        android:layout_marginBottom="1dp"
+        android:src="@drawable/line"
+        app:layout_constraintBottom_toTopOf="@+id/upload" />
+
+    <Button
+        android:id="@+id/upload"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:clickable="true"
+        android:text="Upload file"
+        android:textSize="18sp"
+        android:textColor="@color/two_buttons"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:background="@drawable/blue_button"
+        android:layout_marginBottom="14dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginRight="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>
