@@ -1,2 +1,2 @@
 # CloudIt
-Full details at www.joaobrito.net/projects/cloud_it
+*Full details at www.joaopedrobrito.com/projects/cloud_it.*
